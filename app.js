@@ -10,7 +10,8 @@ const app = express()
 
 app.get("/", (req, res) =>{
     return res.json({
-        message: "Hello world"
+        message: "Hello world",
+        status: 200
     })
 })
 
