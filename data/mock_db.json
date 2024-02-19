@@ -1,11 +1,22 @@
 [
     {
         "id": "asf13rdsf",
-        "eventName": "Andrea Bocelli",
-        "eventDateTime": "12/02/2024 19:00",
-        "venue": "Turkiston Palace",
-        "contactPhone": "712354440",
-        "seat": "sector: A, row: 15, seat: 25"
+        "ticket": {
+            "eventName": "Andrea Bocelli",
+            "eventDateTime": "12/02/2024 19:00",
+            "venue": "Turkiston Palace",
+            "contactPhone": "712354440",
+            "seat": "sector: A, row: 15, seat: 25"
+        }
+    },
+    {
+        "id": "YgRW",
+        "ticket": {
+            "eventName": "dfszdvfSGDFVDF",
+            "eventDateTime": "13/02/2024 12:54",
+            "venue": "zdfbasfC",
+            "contactPhone": "+998914562378",
+            "seat": "WETFGERA"
+        }
     }
-
 ]

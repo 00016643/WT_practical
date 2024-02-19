@@ -1,3 +1,4 @@
+
 const fs = require('fs')
 
 // access global mock db file
@@ -8,6 +9,9 @@ const ticket_service = {
     getAll() {
         return tickets
     },
+    getById(id) {
+        return tickets.find(t => t.id == id)
+    },    
     create(req, res) {
         let new_id = genRandId(4)
                 
@@ -23,6 +27,24 @@ const ticket_service = {
         writeToFile(tickets)
         
         return new_ticket
+    },
+    update(id, updateData){
+        const ticketIndex = tickets.findIndex(t => t.id == id)
+
+        if (ticketIndex === -1) {
+            return null
+        }
+
+        tickets[ticketIndex].ticket = { ...tickets[ticketIndex].ticket, ...updateData }
+
+        writeToFile(tickets)
+
+        return tickets[ticketIndex]
+    },
+    delete(id) {
+        const index = tickets.findIndex(u => u.id == id)
+        tickets.splice(index, 1)    
+        writeToFile(tickets)
     }
 }
 
